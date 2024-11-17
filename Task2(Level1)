@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ff85a2;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 3.5em;
+      margin-bottom: 10px;
+      font-family: 'Pacifico', cursive;
+    }
+
+    header p {
+      font-size: 1.3em;
+      font-weight: lighter;
+    }
+
+    section {
+      margin: 40px auto;
+      padding: 30px;
+      width: 80%;
+      max-width: 1000px;
+      background-color: #ffebf1;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    section:hover {
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    #introduction {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    #profile-image {
+      border-radius: 50%;
+      width: 180px;
+      height: 180px;
+      border: 5px solid #ff85a2;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #ff85a2;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background: #ffd6e7;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    ul li:hover {
+      background: #ffb3d9;
+      cursor: pointer;
+    }
+
+    #resume a {
+      color: #ff85a2;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    #resume a:hover {
+      color: #e74c3c;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #ff85a2;
+      color: white;
+      padding: 15px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer a {
+      color: #ecf0f1;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Harini K</h1>
+    <p>Web Developer | Java Programmer | Passionate Learner</p>
+  </header>
+
+  <section id="introduction">
+    <h2>Introduction</h2>
+    <img src="C:\Users\admin\Downloads\WhatsApp Image 2024-11-17 at 6.34.22 PM.jpeg" alt="Your Image" id="profile-image">
+    <p>Hello! I'm Harini K , a web developer with a passion for creating beautiful and functional websites. I specialize in front-end development and am always eager to learn new technologies to improve my skills.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>React, Node.js</li>
+      <li>Java</li>
+      <li>Version Control (Git)</li>
+      <li>Problem Solving</li>
+    </ul>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>You can download my resume <a href="resume.pdf" target="_blank">here</a>.</p>
+  </section>
+
+  <footer>
+    <p>Contact me at <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+  </footer>
+
+</body>
+</html>
