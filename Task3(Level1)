@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-image: url('https://egqusrjtrmt.exactdn.com/wp-content/uploads/2022/12/temperature-converter-768x512.webp?strip=all&lossy=1&ssl=1');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+    .container {
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    #result {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    #reference-image {
+      margin-top: 20px;
+      width: 150px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Temperature Converter</h2>
+    <input type="number" id="temperature" placeholder="Enter temperature" />
+    <select id="unit">
+      <option value="Celsius">Celsius</option>
+      <option value="Fahrenheit">Fahrenheit</option>
+      <option value="Kelvin">Kelvin</option>
+    </select>
+    <button onclick="convertTemperature()">Convert</button>
+    <div id="result"></div>
+    <img id="reference-image" src="https://feelmanapp.com/wp-content/uploads/2020/06/icon_temperatureconverter.png" alt="Reference Image">
+  </div>
+
+  <script>
+    function convertTemperature() {
+      let temp = parseFloat(document.getElementById('temperature').value);
+      let unit = document.getElementById('unit').value;
+      let result = document.getElementById('result');
+
+      if (isNaN(temp)) {
+        result.innerHTML = "Please enter a valid number!";
+        return;
+      }
+
+      let convertedTemp;
+      let newUnit;
+
+      if (unit === "Celsius") {
+        convertedTemp = (temp * 9/5) + 32;
+        newUnit = "Fahrenheit";
+      } else if (unit === "Fahrenheit") {
+        convertedTemp = (temp - 32) * 5/9;
+        newUnit = "Celsius";
+      } else if (unit === "Kelvin") {
+        convertedTemp = temp - 273.15;
+        newUnit = "Celsius";
+      }
+
+      result.innerHTML = `Converted temperature: ${convertedTemp.toFixed(2)} ${newUnit}`;
+    }
+  </script>
+
+</body>
+</html>
